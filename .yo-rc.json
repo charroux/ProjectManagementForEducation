@@ -1,0 +1,25 @@
+{
+  "generator-jhipster": {
+    "baseName": "projectManagementForEducation",
+    "packageName": "org.olabdynamics.project",
+    "packageFolder": "org/olabdynamics/project",
+    "authenticationType": "session",
+    "hibernateCache": "ehcache",
+    "clusteredHttpSession": "no",
+    "websocket": "no",
+    "databaseType": "sql",
+    "devDatabaseType": "h2Disk",
+    "prodDatabaseType": "mysql",
+    "searchEngine": "elasticsearch",
+    "useSass": false,
+    "buildTool": "maven",
+    "frontendBuilder": "grunt",
+    "enableTranslation": true,
+    "enableSocialSignIn": false,
+    "rememberMeKey": "d5e39b4b8b0da12efd9c8c4a30e9b2988b98a89b",
+    "testFrameworks": [
+      "gatling",
+      "cucumber"
+    ]
+  }
+}

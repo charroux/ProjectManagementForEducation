@@ -1,0 +1,30 @@
+{
+    "relationships": [],
+    "fields": [
+        {
+            "fieldId": 1,
+            "fieldName": "title",
+            "fieldType": "String",
+            "fieldValidateRules": [
+                "required"
+            ]
+        },
+        {
+            "fieldId": 2,
+            "fieldName": "dateOfCreation",
+            "fieldType": "LocalDate",
+            "fieldValidateRules": [
+                "required"
+            ]
+        },
+        {
+            "fieldId": 3,
+            "fieldName": "state",
+            "fieldType": "ProjectState",
+            "fieldValues": "TODO,INPROGRESS,STOPPED,DONE"
+        }
+    ],
+    "changelogDate": "20151206143555",
+    "dto": "no",
+    "pagination": "pager"
+}

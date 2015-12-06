@@ -1,0 +1,11 @@
+{
+    "projectManagementForEducationApp": {
+        "ProjectState" : {
+            "null": "",
+            "TODO": "TODO",
+            "INPROGRESS": "INPROGRESS",
+            "STOPPED": "STOPPED",
+            "DONE": "DONE"
+        }
+    }
+}

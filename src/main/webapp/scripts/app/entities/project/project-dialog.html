@@ -1,0 +1,59 @@
+
+<form name="editForm" role="form" novalidate ng-submit="save()" show-validation>
+
+    <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true"
+                ng-click="clear()">&times;</button>
+        <h4 class="modal-title" id="myProjectLabel" translate="projectManagementForEducationApp.project.home.createOrEditLabel">Create or edit a Project</h4>
+    </div>
+    <div class="modal-body">
+        <jh-alert-error></jh-alert-error>
+        <div class="form-group">
+            <label for="id" translate="global.field.id">ID</label>
+            <input type="text" class="form-control" id="id" name="id"
+                    ng-model="project.id" readonly />
+        </div>
+        <div class="form-group">
+            <label class="control-label" translate="projectManagementForEducationApp.project.title" for="field_title">Title</label>
+            <input type="text" class="form-control" name="title" id="field_title"
+                    ng-model="project.title"
+                    required />
+            <div ng-show="editForm.title.$invalid">
+                <p class="help-block"
+                    ng-show="editForm.title.$error.required" translate="entity.validation.required">
+                    This field is required.
+                </p>
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="control-label" translate="projectManagementForEducationApp.project.dateOfCreation" for="field_dateOfCreation">DateOfCreation</label>
+            <input type="date" class="form-control" name="dateOfCreation" id="field_dateOfCreation"
+                    ng-model="project.dateOfCreation"
+                    required />
+            <div ng-show="editForm.dateOfCreation.$invalid">
+                <p class="help-block"
+                    ng-show="editForm.dateOfCreation.$error.required" translate="entity.validation.required">
+                    This field is required.
+                </p>
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="control-label" translate="projectManagementForEducationApp.project.state" for="field_state">State</label>
+            <select class="form-control" name="state" ng-model="project.state" id="field_state">
+                <option value="TODO" translate="projectManagementForEducationApp.ProjectState.TODO">TODO</option>
+                <option value="INPROGRESS" translate="projectManagementForEducationApp.ProjectState.INPROGRESS">INPROGRESS</option>
+                <option value="STOPPED" translate="projectManagementForEducationApp.ProjectState.STOPPED">STOPPED</option>
+                <option value="DONE" translate="projectManagementForEducationApp.ProjectState.DONE">DONE</option>
+            </select>
+        </div>
+
+    </div>
+    <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal" ng-click="clear()">
+            <span class="glyphicon glyphicon-ban-circle"></span>&nbsp;<span translate="entity.action.cancel">Cancel</span>
+        </button>
+        <button type="submit" ng-disabled="editForm.$invalid || isSaving" class="btn btn-primary">
+            <span class="glyphicon glyphicon-save"></span>&nbsp;<span translate="entity.action.save">Save</span>
+        </button>
+    </div>
+</form>
